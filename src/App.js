@@ -1,6 +1,6 @@
 import { firstClass, secondClass } from "./Test"
 
-console.log("Singleton (default behavior):")
+console.log("New instantiation each time:")
 
 const first = firstClass()
 console.log(`first: ${first.getCount()}`)
@@ -17,7 +17,7 @@ console.log(`second: ${second.getCount()}`)
 console.log(`first: ${first.getCount()}`)
 
 console.log("")
-console.log("New instantiation each time:")
+console.log("Singleton (default behavior):")
 
 const third = secondClass
 console.log(`first: ${third.getCount()}`)
