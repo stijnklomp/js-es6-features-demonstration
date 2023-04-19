@@ -1,4 +1,4 @@
-import { firstClass, secondClass } from "./Test"
+import { firstClass, secondClass, thirdClass } from "./Test"
 
 console.log("New instantiation each time:")
 
@@ -32,5 +32,23 @@ fourth.increment()
 console.log(`second: ${fourth.getCount()}`)
 
 console.log(`first: ${third.getCount()}`)
+
+console.log("")
+console.log("IIFE:")
+
+const fifth = thirdClass
+console.log(`first: ${fifth.getCount()}`)
+fifth.increment()
+console.log(`first: ${fifth.getCount()}`)
+
+const sixth = thirdClass
+console.log(`second: ${sixth.getCount()}`)
+sixth.increment()
+sixth.increment()
+sixth.increment()
+console.log(`second: ${sixth.getCount()}`)
+
+console.log(`first: ${fifth.getCount()}`)
+
 
 export default () => <>App</>;

@@ -19,3 +19,16 @@ export const secondClass = {
         count += 1
     }
 }
+
+export const thirdClass = (() => {
+    let count = 0
+
+    const increment = () => {
+        count += 1
+    }
+
+    return {
+        getCount: () => count,
+        increment
+    }
+})();
